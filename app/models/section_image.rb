@@ -1,0 +1,2 @@
+class SectionImage < ApplicationRecord
+end
