@@ -4,4 +4,5 @@ class Article < ApplicationRecord
 
   has_many :sections
 
+  accepts_nested_attributes_for :sections, :reject_if => lambda { |param| param[:content].blank? }, :allow_destroy => true
 end
