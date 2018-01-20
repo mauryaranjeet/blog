@@ -2,7 +2,7 @@ ActiveAdmin.register Article do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
- permit_params :heading, :content, :image_description, sections_attributes: [:content, :position, :_destroy, :id]
+ permit_params :heading, :content, :image_description, :category, sections_attributes: [:content, :position, :_destroy, :id]
 #
 # or
 #
@@ -16,6 +16,7 @@ ActiveAdmin.register Article do
 		f.inputs "Article Details" do
 			f.input :heading
 			f.input :content
+			f.input :category
 			f.input :image_description, as: :file, hint: image_tag(f.object.image_description.url(:thumb))
 		end
 

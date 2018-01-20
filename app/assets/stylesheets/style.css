@@ -311,7 +311,7 @@ nav a:focus {
     padding: 0;
 }
 .banner-section{
-    width: 67%;
+    width: 100%;
     float: left;
 	    padding: 2em 1em 1.5em 1em;
 		border-right: 1px solid #ddd;
