@@ -1,0 +1,63 @@
+<!-- header-section-starts -->
+<div class="full">
+   <div class="col-md-9 main">
+      <div class="banner-section">
+         <h3 class="tittle">Do-U-Know <i class="glyphicon glyphicon-picture"></i></h3>
+         <!--//banner-->
+         <!--/top-news-->
+         <div class="top-news">
+            <div class="top-inner">
+              <% Article.all.each do |article|%>
+                <div class="col-md-3 top-text">
+                  <%= link_to(article_path(article)) do %>
+                    <%= image_tag article.image_description.url(:medium), class: "img-responsive", alt: ""  %>
+                  <% end %>
+                  <h5 class="top"><a href="single.html"><%= article.heading%></a></h5>
+                  <p>On Jun 25 
+                    <a class="span_link" href="#">
+                      <span class="glyphicon glyphicon-comment"></span>0 
+                    </a>
+                    <a class="span_link" href="#">
+                      <span class="glyphicon glyphicon-eye-open"></span>56 
+                    </a>
+                    <a class="span_link" href="single.html">
+                      <span class="glyphicon glyphicon-circle-arrow-right">
+                        
+                      </span>
+                    </a>
+                  </p>
+               </div>
+              <%end%>
+              <div class="clearfix"> </div>
+            </div>
+         </div>
+         <!--//top-news-->
+      </div>
+      <!--//banner-section-->
+      <div class="clearfix"> </div>
+      <!--/footer-->
+      <div class="copy">
+         <p>&copy; 2016 Blogger. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+      </div>
+      <div class="clearfix"> </div>
+   </div>
+   <div class="clearfix"> </div>
+</div>
+<!--//footer-->
+<!--start-smooth-scrolling-->
+<script type="text/javascript">
+   $(document).ready(function() {
+   	/*
+   	var defaults = {
+    			containerID: 'toTop', // fading element id
+   		containerHoverID: 'toTopHover', // fading element hover id
+   		scrollSpeed: 1200,
+   		easingType: 'linear' 
+   		};
+   	*/
+   	
+   	$().UItoTop({ easingType: 'easeOutQuart' });
+   	
+   });
+</script>
+<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
