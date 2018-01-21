@@ -1,63 +1,84 @@
-<!-- header-section-starts -->
-<div class="full">
-   <div class="col-md-9 main">
-      <div class="banner-section">
-         <h3 class="tittle">Do-U-Know <i class="glyphicon glyphicon-picture"></i></h3>
-         <!--//banner-->
-         <!--/top-news-->
-         <div class="top-news">
-            <div class="top-inner">
-              <% Article.all.each do |article|%>
-                <div class="col-md-3 top-text">
-                  <%= link_to(article_path(article)) do %>
-                    <%= image_tag article.image_description.url(:medium), class: "img-responsive", alt: ""  %>
-                  <% end %>
-                  <h5 class="top"><a href="single.html"><%= article.heading%></a></h5>
-                  <p>On Jun 25 
-                    <a class="span_link" href="#">
-                      <span class="glyphicon glyphicon-comment"></span>0 
-                    </a>
-                    <a class="span_link" href="#">
-                      <span class="glyphicon glyphicon-eye-open"></span>56 
-                    </a>
-                    <a class="span_link" href="single.html">
-                      <span class="glyphicon glyphicon-circle-arrow-right">
-                        
-                      </span>
-                    </a>
-                  </p>
-               </div>
-              <%end%>
-              <div class="clearfix"> </div>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-3 affix" >
+      <!-- Categories Widget -->
+      <div class="card my-4">
+        <h5 class="card-header">Categories</h5>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-5">
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#">Web Design</a>
+                </li>
+                <li>
+                  <a href="#">HTML</a>
+                </li>
+                <li>
+                  <a href="#">Freebies</a>
+                </li>
+              </ul>
             </div>
-         </div>
-         <!--//top-news-->
+          </div>
+        </div>
       </div>
-      <!--//banner-section-->
-      <div class="clearfix"> </div>
-      <!--/footer-->
-      <div class="copy">
-         <p>&copy; 2016 Blogger. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+
+      <!-- Side Widget -->
+      <div class="card my-4">
+        <h5 class="card-header">Advertisements</h5>
+        <div class="card-body">
+          You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+        </div>
       </div>
-      <div class="clearfix"> </div>
-   </div>
-   <div class="clearfix"> </div>
+
+    </div>
+    <!-- Blog Entries Column -->
+    <div class="col-md-7">
+
+      <h1 class="my-4">
+      </h1>
+      <% Article.all.each do |article|%>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title"><%= article.heading %></h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 1, 2017 by
+            <a href="#">Start Bootstrap</a>
+          </div>
+        </div>
+      <% end %>
+
+      <!-- Pagination -->
+      <ul class="pagination justify-content-center mb-4">
+        <li class="page-item">
+          <a class="page-link" href="#">&larr; Older</a>
+        </li>
+        <li class="page-item disabled">
+          <a class="page-link" href="#">Newer &rarr;</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <!-- Sidebar Widgets Column -->
+
+  </div>
+  <!-- /.row -->
+
 </div>
-<!--//footer-->
-<!--start-smooth-scrolling-->
-<script type="text/javascript">
-   $(document).ready(function() {
-   	/*
-   	var defaults = {
-    			containerID: 'toTop', // fading element id
-   		containerHoverID: 'toTopHover', // fading element hover id
-   		scrollSpeed: 1200,
-   		easingType: 'linear' 
-   		};
-   	*/
-   	
-   	$().UItoTop({ easingType: 'easeOutQuart' });
-   	
-   });
-</script>
-<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    <!-- /.container -->
+
+    <!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+    <!-- Bootstrap core JavaScript -->
+
