@@ -19,3 +19,8 @@ body {
 	font-size: 24px;
 	font-weight: bold;
 }
+
+
+.hidden {
+	display:none;
+}

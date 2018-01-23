@@ -34,11 +34,11 @@
 
     </div>
     <!-- Blog Entries Column -->
-    <div class="col-md-7">
+    <div class="col-md-7" id="duk-articles">
 
       <h1 class="my-4">
       </h1>
-      <% Article.all.each do |article|%>
+      <% @articles.each do |article|%>
         <div class="card mb-4">
           <div class="card-body">
             <h2 class="card-title"><%= article.heading %></h2>
@@ -51,17 +51,9 @@
           </div>
         </div>
       <% end %>
-
-      <!-- Pagination -->
-      <ul class="pagination justify-content-center mb-4">
-        <li class="page-item">
-          <a class="page-link" href="#">&larr; Older</a>
-        </li>
-        <li class="page-item disabled">
-          <a class="page-link" href="#">Newer &rarr;</a>
-        </li>
-      </ul>
-
+      <div id="infinite-scrolling" class="hidden">
+        <%= paginate @articles, params: {controller: 'articles', action: 'index'} %>
+      </div>
     </div>
 
     <!-- Sidebar Widgets Column -->

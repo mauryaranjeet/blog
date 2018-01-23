@@ -1,0 +1,7 @@
+$('#duk-articles').append("<%= escape_javascript render(:partial => 'articles/articles') %>");
+<% if @articles.next_page %>
+  $('.pagination').replaceWith('<%= escape_javascript paginate(@articles, params: {controller: 'articles', action: 'index'}) %>');
+<% else %>
+  $(window).off('scroll');
+  $('.pagination').remove();
+<% end %>
