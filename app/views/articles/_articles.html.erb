@@ -5,7 +5,7 @@
         <%= article.heading %>
       </h2>
       <p class="card-text">
-        <%= article.content.html_safe%>
+        <%= article.content[0..200].html_safe%>
       </p>
       <a href="#" class="btn btn-primary">
         Read More &rarr;
