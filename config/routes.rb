@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root to: 'homes#index'
 
   resources :articles
+  resources :article_images
 end
