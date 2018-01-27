@@ -6,15 +6,24 @@
 		<%= render partial: "layouts/one_signal_notification"%>
 		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<link href='//fonts.googleapis.com/css?family=Open+Sans:700,700italic,800,300,300italic,400italic,400,600,600italic' rel='stylesheet' type='text/css'>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
+		<meta name="keywords" content="Blogger Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android  Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="text/javascript">
+       jQuery(document).ready(function($) {
+       	$(".scroll").click(function(event){		
+       		event.preventDefault();
+       		$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+       	});
+       });
+    </script>
 	</head>
 
   <body>
   	<%= render partial: "layouts/nav_bar" %>
     <%= yield %>
-    <%= render partial: "layouts/footer" %>
   </body>
 </html>
