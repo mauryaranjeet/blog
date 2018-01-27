@@ -1,4 +1,4 @@
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-lg-8">
           <h1 class="mt-4"><%= @article.heading %></h1>
@@ -8,11 +8,23 @@
           <hr>
           <p>Posted on <%= @article.created_at.strftime("%B %d, %Y")%></p>
           <hr>
-          <%= image_tag @article.image_description.url(:banner), class: "img-fluid rounded"%>
-          <hr>
-
           <%= @article.content.html_safe%>
           <hr>
         </div>
+
+        <div class="card my-4">
+          <h5 class="card-header">Eye Openers</h5>
+            <div class="card-body">
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <%= image_tag @article.image_description.url(:thumb), class: "media-object"%>
+                </a>
+                <div class="media-body">
+                  <p>Lorem ipsum dolor sit amet aaa ssaaa</p>          
+                </div>
+              </div>
+            </div>
+        </div>
+
       </div>
     </div>
