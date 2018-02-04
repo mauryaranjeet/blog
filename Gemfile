@@ -38,7 +38,7 @@ gem "paperclip", "~> 5.0.0"
 #gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 gem 'activeadmin'
-gem "devise"
+gem 'devise', git: 'https://github.com/plataformatec/devise' #, ref: '88e9a85'
 gem 'tinymce-rails'
 gem 'kaminari'
 gem 'listen', '>= 3.0.5', '< 3.2'
