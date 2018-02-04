@@ -5,7 +5,7 @@
         <%= article.heading %>
       </h2>
       <p class="card-text">
-        <%= article.content[0..200].html_safe%>
+        <%= article.short_description%>
       </p>
       <%= link_to article_path(article), class: "btn btn-primary" do  %> 
         Read More

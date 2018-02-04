@@ -2,7 +2,7 @@ ActiveAdmin.register Article do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
- permit_params :source, :source_url, :heading, :content, :section_start_heading, :image_description, :category, :section_footer, sections_attributes: [:content, :position, :_destroy, :id, :heading]
+ permit_params :source, :source_url, :heading, :content, :section_start_heading, :image_description, :category, :section_footer, :short_description, sections_attributes: [:content, :position, :_destroy, :id, :heading]
 #
 # or
 #
@@ -18,6 +18,7 @@ ActiveAdmin.register Article do
 			f.input :content, input_html: { class: "tinymce", rows: "40", cols: "120" }
 			f.input :category
 			f.input :image_description, as: :file, hint: image_tag(f.object.image_description.url(:thumb))
+			f.input :short_description
 			f.input :section_start_heading
 			f.input :section_footer
 			f.input :source
