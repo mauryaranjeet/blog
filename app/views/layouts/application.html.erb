@@ -6,7 +6,6 @@
 		<%= render partial: "layouts/google_analytics" %>
 		<%#= render partial: "layouts/one_signal_notification"%>
 		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-		<%= render partial: "layouts/share_this"%>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 		<link href='//fonts.googleapis.com/css?family=Open+Sans:700,700italic,800,300,300italic,400italic,400,600,600italic' rel='stylesheet' type='text/css'>
 		<meta charset="utf-8">
@@ -52,5 +51,6 @@
 		   });
 		</script>
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+		<%= render partial: "layouts/share_this"%>
 	</body>    	
 </html>
