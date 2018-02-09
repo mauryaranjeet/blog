@@ -42,6 +42,7 @@ gem 'devise', git: 'https://github.com/plataformatec/devise' #, ref: '88e9a85'
 gem 'tinymce-rails'
 gem 'kaminari'
 gem 'listen', '>= 3.0.5', '< 3.2'
+gem 'friendly_id', '~> 5.1.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
