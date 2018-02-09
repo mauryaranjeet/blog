@@ -3,9 +3,10 @@
 <% content_for :not_authorized do %>
   <meta property="og:url" content="<%= request.original_url %>" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="do You know" />
-  <meta property="og:description" content="<%= @article.heading%>" />
-  <meta name="description" content="<%= @article.heading%>">
+  <meta property="og:site_name" content="douknow.in" />
+  <meta property="og:title" content="<%= @article.heading%>" />
+  <meta property="og:description" content="" />
+  <meta name="description" content="">
   <meta property="og:image" content="<%= asset_url(@article.image_description.url)%>" />
 <% end %>
 
