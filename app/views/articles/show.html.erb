@@ -1,5 +1,13 @@
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<% content_for :not_authorized do %>
+  <meta property="og:url"           content="<%= request.original_url %>" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="do You know" />
+  <meta property="og:description"   content="<%= @article.heading%>" />
+  <meta property="og:image"         content="<%= asset_url(@article.image_description.url)%>" />
+<% end %>
+
 <h3 class="tittle"><%= @article.heading%></h3>
 <div class="single">
   <div class="b-bottom">
