@@ -2,7 +2,7 @@ ActiveAdmin.register Article do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
- permit_params :source, :source_url, :heading, :content, :section_start_heading, :image_description, :category, :section_footer, :short_description, sections_attributes: [:content, :position, :_destroy, :id, :heading]
+ permit_params :source, :source_url, :heading, :content, :section_start_heading, :image_description, :category, :section_footer, :short_description, :is_short_duk, sections_attributes: [:content, :position, :_destroy, :id, :heading]
 #
 # or
 #
@@ -23,6 +23,7 @@ ActiveAdmin.register Article do
 			f.input :section_footer
 			f.input :source
 			f.input :source_url
+			f.input :is_short_duk
 		end
 
 		f.inputs "Sections" do 
